@@ -97,7 +97,7 @@ endif()
 
 # Add our module path
 # CMAKE_BINARY_DIR is required for Conan to work
-set( AUDACITY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules")
+set( AUDACITY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules" )
 set( CMAKE_MODULE_PATH 
    ${AUDACITY_MODULE_PATH}
    ${CMAKE_BINARY_DIR}
@@ -166,6 +166,7 @@ include( CMakeDetermineASM_NASMCompiler )
 include( CMakePushCheckState )
 include( GNUInstallDirs )
 include( TestBigEndian )
+include( FeatureSummary )
 
 # Determine 32-bit or 64-bit target
 if( CMAKE_C_COMPILER_ID MATCHES "MSVC" AND CMAKE_VS_PLATFORM_NAME MATCHES "Win64|x64" )
@@ -553,3 +554,5 @@ endif()
 #]]
 
 include( Package ) # do this last
+
+feature_summary( WHAT ALL )

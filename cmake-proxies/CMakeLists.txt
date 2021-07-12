@@ -133,6 +133,21 @@ add_conan_lib(
    REQUIRED
 )
 
+add_conan_lib(
+   SQLite3
+   sqlite3/3.36.0
+   REQUIRED
+   PKG_CONFIG "sqlite3 >= 3.32.0"
+)
+
+add_conan_lib(
+   portaudio
+   portaudio/v190600.20161030@bincrafters/stable
+   REQUIRED
+   PKG_CONFIG "portaudio"
+)
+
+
 set_conan_vars_to_parent()
 
 # Required libraries
@@ -140,8 +155,9 @@ set_conan_vars_to_parent()
 #       directory          option      symbol      req   chk   version
 addlib( libsndfile         sndfile     SNDFILE     YES   YES   "sndfile >= 1.0.28" )
 addlib( libsoxr            soxr        SOXR        YES   YES   "soxr >= 0.1.1" )
-addlib( portaudio-v19      portaudio   PORTAUDIO   YES   YES   "" )
-addlib( sqlite             sqlite      SQLITE      YES   YES   "sqlite3 >= 3.32.0" )
+# addlib( portaudio-v19      portaudio   PORTAUDIO   YES   YES   "" )
+# addlib( sqlite             sqlite      SQLITE      YES   YES   "sqlite3 >= 3.32.0" )
+
 
 # Optional libraries
 #

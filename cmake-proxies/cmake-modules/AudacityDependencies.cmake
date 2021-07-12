@@ -23,6 +23,7 @@ set( CONAN_RESOLVE_LIST )
 #   REQUIRED 
 #   ALWAYS_ALLOW_CONAN_FALLBACK
 #   PKG_CONFIG "wxwidgets >= 3.1.3"
+#   ALLOW_FIND_PACKAGE
 #   FIND_PACKAGE_OPTIONS COMPONENTS adv base core html qa xml
 #   INTERFACE_NAME wxwidgets::wxwidgets
 #   HAS_ONLY_DEBUG_RELEASE
@@ -52,8 +53,10 @@ function (add_conan_lib package conan_package_name )
     foreach( opt IN LISTS options )
         if( opt STREQUAL "FIND_PACKAGE_OPTIONS" )
             set( list_mode on )
-            set( allow_find_package on )
             set( current_var "find_package_options" )
+        elseif ( opt STREQUAL "ALLOW_FIND_PACKAGE" )
+            set( list_mode on )
+            set( allow_find_package on )
         elseif ( opt STREQUAL "CONAN_OPTIONS" )
             set( list_mode on )
             set( current_var "conan_package_options" )
@@ -152,7 +155,7 @@ function (add_conan_lib package conan_package_name )
         endif()
 
         if( allow_find_package )
-            find_package( ${package} QUIET ${find_package_options} )
+            find_package( ${package} ${find_package_options} )
 
             if ( ${package}_FOUND )
                 message( STATUS "Using '${package}' system library" )
