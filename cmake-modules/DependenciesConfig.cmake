@@ -156,3 +156,27 @@ add_external_lib(
    INTERFACE_NAME SndFile::SndFile
    PKG_CONFIG "sndfile >= 1.0.28"
 )
+
+add_external_lib(
+   Soxr
+   libsoxr/0.1.3@tenacity/stable
+   OPTION_NAME soxr
+   INTERFACE_NAME Soxr::Soxr
+   PKG_CONFIG "soxr >= 0.1.1"
+)
+
+add_external_lib(
+   VampHostSDK
+   vamp/2.9.0@tenacity/stable
+   OPTION_NAME vamp
+   INTERFACE_NAME VampHostSDK::VampHostSDK
+   PKG_CONFIG "vamp >= 2.5" "vamp-hostsdk >= 2.5"
+)
+
+add_external_lib(
+   portSMF
+   portsmf/236@tenacity/stable
+   OPTION_NAME portsmf
+   INTERFACE_NAME portSMF::portSMF
+   PKG_CONFIG "portSMF >= 0.1"
+)

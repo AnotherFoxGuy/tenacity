@@ -2,7 +2,7 @@
 #
 #       directory          option      symbol      req   chk   version
 # addlib( libsndfile         sndfile     SNDFILE     YES   YES   "sndfile >= 1.0.28" )
-addlib( libsoxr            soxr        SOXR        YES   YES   "soxr >= 0.1.1" )
+# addlib( libsoxr            soxr        SOXR        YES   YES   "soxr >= 0.1.1" )
 addlib( portaudio-v19      portaudio   PORTAUDIO   YES   YES   "portaudio-2.0 >= 19" )
 # addlib( sqlite             sqlite      SQLITE      YES   YES   "sqlite3 >= 3.32.0" )
 
@@ -11,7 +11,7 @@ addlib( portaudio-v19      portaudio   PORTAUDIO   YES   YES   "portaudio-2.0 >=
 #       directory          option      symbol      req   chk   version
 addlib( ffmpeg             ffmpeg      FFMPEG      NO    NO    "libavcodec >= 51.53" "libavformat >= 52.12" "libavutil >= 52.66" )
 addlib( libnyquist         nyquist     NYQUIST     NO    YES   "" )
-addlib( libvamp            vamp        VAMP        NO    YES   "vamp >= 2.5" "vamp-hostsdk >= 2.5" )
+# addlib( libvamp            vamp        VAMP        NO    YES   "vamp >= 2.5" "vamp-hostsdk >= 2.5" )
 # addlib( libogg             ogg         LIBOGG      NO    YES   "ogg >= 1.3.1" )
 # addlib( libvorbis          vorbis      LIBVORBIS   NO    YES   "vorbis >= 1.3.3" "vorbisenc >= 1.3.3" "vorbisfile >= 1.3.3" )
 # addlib( libflac            flac        LIBFLAC     NO    YES   "flac >= 1.3.1" "flac++ >= 1.3.1" )
@@ -37,7 +37,7 @@ if (NOT USE_PORTMIXER AND
    message(FATAL_ERROR "EXPERIMENTAL_AUTOMATED_INPUT_LEVEL_ADJUSTMENT requires USE_PORTMIXER")
 endif ()
 
-addlib( portsmf            portsmf     PORTSMF     NO    YES   "portSMF >= 0.1" )
+#addlib( portsmf            portsmf     PORTSMF     NO    YES   "portSMF >= 0.1" )
 addlib( libsbsms           sbsms       SBSMS       NO    YES   "sbsms >= 2.2.0" )
 addlib( soundtouch         soundtouch  SOUNDTOUCH  NO    YES   "soundtouch >= 1.7.1" )
 addlib( twolame            twolame     LIBTWOLAME  NO    YES   "twolame >= 0.3.13" )

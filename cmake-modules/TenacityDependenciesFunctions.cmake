@@ -7,6 +7,11 @@ if(USE_CONAN)
         URL https://artifactory.audacityteam.org/artifactory/api/conan/conan-local
         VERIFY_SSL True
     )
+
+    conan_add_remote(NAME tenacity
+        URL https://artifactory.anotherfoxguy.com/artifactory/api/conan/tenacity
+        VERIFY_SSL True
+    )
 endif()
 
 set( CONAN_BUILD_REQUIRES )
