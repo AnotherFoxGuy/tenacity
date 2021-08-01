@@ -1078,7 +1078,7 @@ list( APPEND LIBRARIES
       wxwidgets::wxwidgets
       expat::expat
       LAME::LAME
-      libsndfile
+      SndFile::SndFile
       libsoxr
       portaudio-v19
       SQLite3::SQLite3

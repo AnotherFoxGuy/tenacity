@@ -1,7 +1,7 @@
 # Required libraries
 #
 #       directory          option      symbol      req   chk   version
-addlib( libsndfile         sndfile     SNDFILE     YES   YES   "sndfile >= 1.0.28" )
+# addlib( libsndfile         sndfile     SNDFILE     YES   YES   "sndfile >= 1.0.28" )
 addlib( libsoxr            soxr        SOXR        YES   YES   "soxr >= 0.1.1" )
 addlib( portaudio-v19      portaudio   PORTAUDIO   YES   YES   "portaudio-2.0 >= 19" )
 # addlib( sqlite             sqlite      SQLITE      YES   YES   "sqlite3 >= 3.32.0" )

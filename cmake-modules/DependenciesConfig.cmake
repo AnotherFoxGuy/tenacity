@@ -4,6 +4,7 @@ add_external_lib(
    ZLIB
    zlib/1.2.11
    REQUIRED
+   OPTION_NAME zlib
    PKG_CONFIG "zlib >= 1.2.11"
    INTERFACE_NAME ZLIB::ZLIB
    CONAN_OPTIONS 
@@ -52,6 +53,7 @@ add_external_lib(
    REQUIRED 
    ALWAYS_ALLOW_CONAN_FALLBACK
    FIND_PACKAGE_OPTIONS COMPONENTS adv base core html qa xml net
+   OPTION_NAME wxwidgets
    INTERFACE_NAME wxwidgets::wxwidgets
    CONAN_OPTIONS 
       wxwidgets:shared=True
@@ -82,6 +84,7 @@ add_external_lib(
    libmp3lame/3.100
    REQUIRED
    FIND_PACKAGE
+   OPTION_NAME lame
    INTERFACE_NAME LAME::LAME
 )
 
@@ -112,16 +115,17 @@ add_external_lib(
    rapidjson/1.1.0
    REQUIRED
    FIND_PACKAGE
+   OPTION_NAME rapidjson
 )
 
 add_external_lib(
    SQLite3
    sqlite3/3.36.0
    REQUIRED
+   OPTION_NAME sqlite3
    INTERFACE_NAME SQLite3::SQLite3
    PKG_CONFIG "sqlite3 >= 3.32.0"
 )
-
 
 add_external_lib(
    ogg
@@ -133,6 +137,7 @@ add_external_lib(
 add_external_lib(
    Vorbis
    vorbis/1.3.7
+   OPTION_NAME vorbis
    INTERFACE_NAME Vorbis::vorbis
    PKG_CONFIG "vorbis >= 1.3.3" "vorbisenc >= 1.3.3" "vorbisfile >= 1.3.3"
 )
@@ -144,3 +149,10 @@ add_external_lib(
    PKG_CONFIG "flac >= 1.3.1" "flac++ >= 1.3.1"
 )
 
+add_external_lib(
+   SndFile
+   libsndfile/1.0.31
+   OPTION_NAME sndfile
+   INTERFACE_NAME SndFile::SndFile
+   PKG_CONFIG "sndfile >= 1.0.28"
+)

@@ -293,7 +293,7 @@ list( APPEND OPTIONS
 list( APPEND LIBRARIES
    PRIVATE
       portaudio-v19
-      libsndfile
+      SndFile::SndFile
 )
 
 organize_source( "${TARGET_ROOT}" "" "${SOURCES}" )
