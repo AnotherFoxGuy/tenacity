@@ -44,7 +44,7 @@ list( APPEND DEFINES
 
 list( APPEND LIBRARIES
    PRIVATE
-      libogg
+      Ogg::ogg
 )
 
 configure_file( config.h.in private/config.h )

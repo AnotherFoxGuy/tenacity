@@ -62,7 +62,7 @@ list( APPEND DEFINES
 
 list( APPEND LIBRARIES
    PUBLIC
-      libogg
+      Ogg::ogg
 )
 
 set( CPU_IS_BIG_ENDIAN ${WORDS_BIGENDIAN} )

@@ -6,7 +6,6 @@ add_external_lib(
    REQUIRED
    PKG_CONFIG "zlib >= 1.2.11"
    INTERFACE_NAME ZLIB::ZLIB
-   OPTION_NAME zlib
    CONAN_OPTIONS 
       zlib:shared=True
 )
@@ -52,7 +51,6 @@ add_external_lib(
    wxwidgets/3.1.3.1-audacity 
    REQUIRED 
    ALWAYS_ALLOW_CONAN_FALLBACK
-   OPTION_NAME wxwidgets
    FIND_PACKAGE_OPTIONS COMPONENTS adv base core html qa xml net
    INTERFACE_NAME wxwidgets::wxwidgets
    CONAN_OPTIONS 
@@ -90,7 +88,6 @@ add_external_lib(
 add_external_lib(
    libid3tag
    libid3tag/0.15.2b@audacity/stable
-   OPTION_NAME libid3tag
    PKG_CONFIG "id3tag >= 0.15.0b"
    CONAN_OPTIONS
       libid3tag:zlib=${id3tag_zlib}
@@ -99,7 +96,6 @@ add_external_lib(
 add_external_lib(
    libmad
    libmad/0.15.2b@audacity/stable
-   OPTION_NAME libmad
    PKG_CONFIG "mad >= 0.15.0b"
 )
 
@@ -117,3 +113,34 @@ add_external_lib(
    REQUIRED
    FIND_PACKAGE
 )
+
+add_external_lib(
+   SQLite3
+   sqlite3/3.36.0
+   REQUIRED
+   INTERFACE_NAME SQLite3::SQLite3
+   PKG_CONFIG "sqlite3 >= 3.32.0"
+)
+
+
+add_external_lib(
+   ogg
+   ogg/1.3.4
+   INTERFACE_NAME Ogg::ogg
+   PKG_CONFIG "ogg >= 1.3.1"
+)
+
+add_external_lib(
+   Vorbis
+   vorbis/1.3.7
+   INTERFACE_NAME Vorbis::vorbis
+   PKG_CONFIG "vorbis >= 1.3.3" "vorbisenc >= 1.3.3" "vorbisfile >= 1.3.3"
+)
+
+add_external_lib(
+   flac
+   flac/1.3.3
+   INTERFACE_NAME FLAC::FLAC
+   PKG_CONFIG "flac >= 1.3.1" "flac++ >= 1.3.1"
+)
+

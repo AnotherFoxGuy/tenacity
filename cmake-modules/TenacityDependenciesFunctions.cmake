@@ -39,8 +39,8 @@ function( add_external_lib package conan_package_name )
     list(REMOVE_AT ARGV 0 1 )
     better_parse_args(
         . REQUIRED FIND_PACKAGE ALWAYS_ALLOW_CONAN_FALLBACK HAS_ONLY_DEBUG_RELEASE
-        - OPTION_NAME SYMBOL PKG_CONFIG INTERFACE_NAME
-        + CONAN_OPTIONS FIND_PACKAGE_OPTIONS
+        - OPTION_NAME SYMBOL INTERFACE_NAME
+        + CONAN_OPTIONS FIND_PACKAGE_OPTIONS PKG_CONFIG
     )
 
     set( option_name_base ${package} )

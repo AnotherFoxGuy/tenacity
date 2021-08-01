@@ -1081,13 +1081,13 @@ list( APPEND LIBRARIES
       libsndfile
       libsoxr
       portaudio-v19
-      sqlite
+      SQLite3::SQLite3
       $<$<BOOL:${USE_FFMPEG}>:ffmpeg>
       $<$<BOOL:${USE_LIBID3TAG}>:libid3tag::libid3tag>
-      $<$<BOOL:${USE_LIBFLAC}>:libflac>
+      $<$<BOOL:${USE_LIBFLAC}>:FLAC::FLAC>
       $<$<BOOL:${USE_LIBMAD}>:libmad::libmad>
-      $<$<BOOL:${USE_LIBOGG}>:libogg>
-      $<$<BOOL:${USE_LIBVORBIS}>:libvorbis>
+      $<$<BOOL:${USE_LIBOGG}>:Ogg::ogg>
+      $<$<BOOL:${USE_LIBVORBIS}>:Vorbis::vorbis>
       $<$<BOOL:${USE_LIBTWOLAME}>:twolame>
       $<$<BOOL:${USE_LV2}>:lv2>
       $<$<BOOL:${USE_MIDI}>:portmidi>
